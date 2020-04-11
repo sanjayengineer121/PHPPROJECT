@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+</html>
+
+
+
+
+<head>
+
+<SCRIPT language=JavaScript>
+
+function perc() {
+ p = document.form2.FirstName.value;
+ c = document.form2.MiddleName.value;
+ b = document.form2.LastName.value
+ e = document.form2.Email.value;
+ m = document.form2.Math.value;
+
+
+ }
+
+</SCRIPT>
+    </head>
+
+<body bgcolor="#D33C08">
+  <h5 align="center"> Select your option </h4>
+
+
+
+<label for="Details">
+    <input type="checkbox" id="Details" onclick="ShowHideDiv(this)" />
+    Show details
+</label>
+<hr />
+<div id="details" style="display: none">
+    <h3>Enter ID of the STUDENT</h2>
+    <input type="text" id="id" name="id" />
+    <input type="submit" name="submit" method="GET" action="Update.php"/>
+</div>
+<script type="text/javascript">
+    function ShowHideDiv(Details) {
+        var details = document.getElementById("details");
+        details.style.display = Details.checked ? "block" : "none";
+    }
+</script>
+<hr/>
+<label for="Update">
+    <input type="checkbox" id="Update" onclick="ShowHideDiv3(this)" />
+    Enter New data
+</label>
+<hr />
+<form method="GET" action="Update.php">
+<div id="update" style="display: none">
+
+
+
+
+
+<FORM name=form2 method="GET">
+<TABLE cellSpacing=2 cellPadding=1 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle colSpan=4><B><FONT size=4>ENTER DETAILS</FONT></B>
+      </TD>
+  <TR>
+    <TD>ID : = <INPUT size=6 name=Id> </TD>
+  <TD>Name IS : = <INPUT size=6 name=Name></TD>
+    <!-- <TD>Answer: <INPUT maxLength=41 size=5 name=total1></TD>
+    <TD><INPUT onclick=perc2() type=button value=Calculate></TD> -->
+  <TR><TD align ="center" colspan=3>    <b>   Enter Marks </b>    </TD></TR>
+  <TR>
+    <TD> FirstName:  <INPUT size=6 name="FirstName"></TD>
+  <TD>MiddleName: <INPUT size=6  name=MiddleName></TD>
+  </TR>
+  <TR>
+    <TD>LastName: <INPUT size=6 name=LastName> </TD>
+  <TD> Math: <input size =4 name=Math></TD>
+</tr>
+      <tr>
+    <td align="center" colspan=3>Email:  <input size=3 name=Email></td>
+   </tr>
+
+  <TR>
+  <TD><input type="submit" name="submit_U" onsubmit="perc()" /></TD>
+    <TD align=middle
+colSpan=4><INPUT type=reset value=Reset></TD></TR></TBODY></TABLE></FORM>
+    
+</div>
+<hr/>
+
+
+<script type="text/javascript">
+    function ShowHideDiv3(Update) {
+        var update = document.getElementById("update");
+        update.style.display = Update.checked ? "block" : "none";
+
+  }
+
+</script>
+
+
+
+
+
+
+
+   </body>
+</html>
